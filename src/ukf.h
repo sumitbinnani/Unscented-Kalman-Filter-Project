@@ -34,8 +34,8 @@ public:
   ///* time when the state is true, in us
   long long time_us_;
 
-	///*
-	long long previous_timestamp_;
+  ///*
+  long long previous_timestamp_;
 
   ///* Process noise standard deviation longitudinal acceleration in m/s^2
   double std_a_;
@@ -56,7 +56,7 @@ public:
   double std_radphi_;
 
   ///* Radar measurement noise standard deviation radius change in m/s
-  double std_radrd_ ;
+  double std_radrd_;
 
   ///* Weights of sigma points
   VectorXd weights_;
@@ -73,15 +73,15 @@ public:
   ///* Process Noise Covariance Matrix
   MatrixXd Q;
 
-	///* Radar measurements
-	int n_z_radar_ = 3;
+  ///* Radar measurements
+  int n_z_radar_ = 3;
 
-	///* Lidar measurements
-	int n_z_lidar_ = 2;
+  ///* Lidar measurements
+  int n_z_lidar_ = 2;
 
-	// Measurement Noises
-	MatrixXd R_laser_;
-	MatrixXd R_radar_;
+  // Measurement Noises
+  MatrixXd R_laser_;
+  MatrixXd R_radar_;
 
 
   /**
@@ -120,8 +120,10 @@ public:
   void UpdateRadar(MeasurementPackage meas_package);
 
   void GenerateStateSigmaPoints(double delta_t);
+
   void PredictMeanAndCovariance();
-	void UpdateMeasurement(MeasurementPackage meas_package);
+
+  void UpdateMeasurement(MeasurementPackage meas_package);
 
 };
 
