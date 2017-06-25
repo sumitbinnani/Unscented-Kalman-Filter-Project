@@ -9,6 +9,7 @@ In this project, an Unscented Kalman Filter is used to estimate the state of a m
 The noise parameters were tuned by NIS creterion i.e. NIS for Radar and Laser should be below 7.8 and 5.99 respectively. Following images shows the graph of NIS for Radar and Laser.
 
 <img style="width:500px; margin:auto" src="./images/nisradar.png">
+<br/><br/>
 <img style="width:500px; margin:auto" src="./images/nislaser.png">
 
 
